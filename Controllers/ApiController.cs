@@ -3,7 +3,7 @@
 // using System.Linq;
 // using System.Threading.Tasks;
 
-// namespace BuildingBlocksTechTest.Controllers
+// namespace GoogleDistanceMatrix.Controllers
 // {
 //     [Route("api/[controller]")]
 //     public class ApiController : Controller

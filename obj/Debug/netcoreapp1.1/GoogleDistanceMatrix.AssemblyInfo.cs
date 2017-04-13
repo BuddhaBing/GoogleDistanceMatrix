@@ -3,11 +3,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("BuildingBlocksTechTest")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("GoogleDistanceMatrix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Package Description")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("BuildingBlocksTechTest")]
-[assembly: System.Reflection.AssemblyTitleAttribute("BuildingBlocksTechTest")]
+[assembly: System.Reflection.AssemblyProductAttribute("GoogleDistanceMatrix")]
+[assembly: System.Reflection.AssemblyTitleAttribute("GoogleDistanceMatrix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

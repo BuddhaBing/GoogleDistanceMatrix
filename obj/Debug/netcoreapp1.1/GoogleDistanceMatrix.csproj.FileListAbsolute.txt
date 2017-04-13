@@ -1,0 +1,16 @@
+/Users/rob/Drive/projects/GoogleDistanceMatrix/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.deps.json
+/Users/rob/Drive/projects/GoogleDistanceMatrix/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.runtimeconfig.json
+/Users/rob/Drive/projects/GoogleDistanceMatrix/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.runtimeconfig.dev.json
+/Users/rob/Drive/projects/GoogleDistanceMatrix/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.dll
+/Users/rob/Drive/projects/GoogleDistanceMatrix/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.pdb
+/Users/rob/Drive/projects/GoogleDistanceMatrix/obj/Debug/netcoreapp1.1/GoogleDistanceMatrix.AssemblyInfo.cs
+/Users/rob/Drive/projects/GoogleDistanceMatrix/obj/Debug/netcoreapp1.1/GoogleDistanceMatrix.dll
+/Users/rob/Drive/projects/GoogleDistanceMatrix/obj/Debug/netcoreapp1.1/GoogleDistanceMatrix.pdb
+/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.deps.json
+/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.runtimeconfig.json
+/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.runtimeconfig.dev.json
+/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.dll
+/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/GoogleDistanceMatrix.pdb
+/Users/rob/Drive/projects/BuildingBlocksTechTest/obj/Debug/netcoreapp1.1/GoogleDistanceMatrix.AssemblyInfo.cs
+/Users/rob/Drive/projects/BuildingBlocksTechTest/obj/Debug/netcoreapp1.1/GoogleDistanceMatrix.dll
+/Users/rob/Drive/projects/BuildingBlocksTechTest/obj/Debug/netcoreapp1.1/GoogleDistanceMatrix.pdb

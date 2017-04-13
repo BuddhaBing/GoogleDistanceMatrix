@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-namespace BuildingBlocksTechTest
+namespace GoogleDistanceMatrix
 {
     class Program
     {

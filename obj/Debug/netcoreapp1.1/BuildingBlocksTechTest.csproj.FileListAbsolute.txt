@@ -1,8 +1,0 @@
-/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/BuildingBlocksTechTest.deps.json
-/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/BuildingBlocksTechTest.runtimeconfig.json
-/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/BuildingBlocksTechTest.runtimeconfig.dev.json
-/Users/rob/Drive/projects/BuildingBlocksTechTest/obj/Debug/netcoreapp1.1/BuildingBlocksTechTest.AssemblyInfo.cs
-/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/BuildingBlocksTechTest.dll
-/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/Debug/netcoreapp1.1/BuildingBlocksTechTest.pdb
-/Users/rob/Drive/projects/BuildingBlocksTechTest/obj/Debug/netcoreapp1.1/BuildingBlocksTechTest.dll
-/Users/rob/Drive/projects/BuildingBlocksTechTest/obj/Debug/netcoreapp1.1/BuildingBlocksTechTest.pdb

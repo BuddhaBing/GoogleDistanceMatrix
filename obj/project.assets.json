@@ -7384,16 +7384,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rob/Drive/projects/BuildingBlocksTechTest/BuildingBlocksTechTest.csproj",
-      "projectName": "BuildingBlocksTechTest",
-      "projectPath": "/Users/rob/Drive/projects/BuildingBlocksTechTest/BuildingBlocksTechTest.csproj",
+      "projectUniqueName": "/Users/rob/Drive/projects/BuildingBlocksTechTest/GoogleDistanceMatrix.csproj",
+      "projectName": "GoogleDistanceMatrix",
+      "projectPath": "/Users/rob/Drive/projects/BuildingBlocksTechTest/GoogleDistanceMatrix.csproj",
       "outputPath": "/Users/rob/Drive/projects/BuildingBlocksTechTest/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/BuildingBlocksTechTest.dll": "/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/placeholder/netcoreapp1.1/BuildingBlocksTechTest.dll"
+        "lib/netcoreapp1.1/GoogleDistanceMatrix.dll": "/Users/rob/Drive/projects/BuildingBlocksTechTest/bin/placeholder/netcoreapp1.1/GoogleDistanceMatrix.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

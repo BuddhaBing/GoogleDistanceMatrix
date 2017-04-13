@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v1.1": {
-      "buildingblockstechtest/1.0.0": {
+      "googledistancematrix/1.0.0": {
         "dependencies": {
           "System.Net.Http": "4.3.1",
           "System.Runtime.Serialization.Json": "4.3.0"
         },
         "runtime": {
-          "BuildingBlocksTechTest.dll": {}
+          "GoogleDistanceMatrix.dll": {}
         }
       },
       "system.net.http/4.3.1": {
@@ -66,7 +66,7 @@
     }
   },
   "libraries": {
-    "buildingblockstechtest/1.0.0": {
+    "googledistancematrix/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
