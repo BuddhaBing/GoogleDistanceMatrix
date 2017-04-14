@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace GoogleDistanceMatrix
 {
@@ -19,39 +21,65 @@ namespace GoogleDistanceMatrix
         static String origin;
         static String destination;
 
+        static List<String> paramList = new List<String>();
         static String urlParams;
+        static String distance;
+        static JObject jsonObj;
 
-        private static async Task ProcessRequest()
+        private static async Task ProcessRequest(String url)
         {
-            var client = new HttpClient();
+            HttpClient client = new HttpClient();
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Add("User-Agent", "Google Maps Distance Matrix Reporter");
+                var stringTask = client.GetStringAsync(url);
+                jsonObj = JObject.Parse(await stringTask);
+        }
 
-                var stringTask = client.GetStringAsync(baseUrl + urlParams);
-
-                var msg = await stringTask;
-                Console.Write(msg);
+        static void ProcessDistance() {
+            distance = (string) jsonObj["rows"][0]["elements"][0]["distance"]["text"];
         }
 
         static void SetParams() {
-            urlParams = $"?units={unit}&origins={origin}&destinations={destination}&key={key}";
+            paramList.Add($"units={unit}");
+            paramList.Add($"origins={origin}");
+            paramList.Add($"destinations={destination}");
+            paramList.Add($"key={key}");
         }
 
-        static void Main (string[] args)
+        static void CompileParams() {
+            foreach(String param in paramList) {
+                if (paramList.IndexOf(param) == 0) {
+                    urlParams += (@"?" + param);
+                } else {
+                    urlParams += (@"&" + param);
+                } 
+            }
+        }
+
+        static void PrintResult()
+        {
+            Console.WriteLine(distance);
+        }
+
+        static void UserInput()
         {
             Console.WriteLine("Please enter the origin location: ");
             origin = Console.ReadLine();
 
             Console.WriteLine("Please enter the destination location: ");
             destination = Console.ReadLine();
+        }
 
+        static void Main (string[] args)
+        {
+            UserInput();
             SetParams();
-            ProcessRequest().Wait();
-        
-            // Console.WriteLine("Hit ENTER to exit...");
-            // Console.ReadLine();
+            CompileParams();
+            ProcessRequest(baseUrl + urlParams).Wait();
+            ProcessDistance();
+            PrintResult();
         }
     }
 }
