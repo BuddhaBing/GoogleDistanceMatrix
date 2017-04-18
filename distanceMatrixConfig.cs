@@ -7,7 +7,6 @@ public class DistanceMatrixConfig
     private String apiKey = @"";
     private List<String> paramList = new List<String>();
     private String urlParams;
-
     private Queue<String> paramNames = new Queue<String>();
 
     public DistanceMatrixConfig()
