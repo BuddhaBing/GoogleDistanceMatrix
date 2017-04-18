@@ -7,40 +7,53 @@ namespace GoogleDistanceMatrix
 {
     class Program
     {
+        static ConsoleIo consoleIo;
+        static List<String> values = new List<String>();
 
-        static string Distance(JObject obj)
+        static void AddValues()
         {
-            if (IsGoodResponse(obj))
+            values.Add("distance");
+            values.Add("duration");
+        }
+
+        static string Url(List<string> userResponses) {
+            DistanceMatrixConfig matrixConf = new DistanceMatrixConfig();
+            foreach (String inputText in userResponses)
             {
-                return GetDistance(obj);
-            } else
+                matrixConf.AddParam = inputText;
+            }
+            return matrixConf.Url;
+        }
+
+        static string Extract(JObject obj, String dataType)
+        {
+            try
+            {
+                return (string) obj["rows"][0]["elements"][0][$"{dataType}"]["text"];
+            }
+            catch
             {
                 return "Error - unable to calculate using information entered";
             }
         }
 
-        static bool IsGoodResponse(JObject obj)
+        static void Finalise(JObject obj)
         {
-            return (string) obj["rows"][0]["elements"][0]["status"] == "OK";
-        }
-
-        static string GetDistance(JObject obj)
-        {
-            return (string) obj["rows"][0]["elements"][0]["distance"]["text"];
+            foreach(String value in values)
+            {
+                var extractedVal = Extract(obj, value);
+                consoleIo.Output($"The {value} is: {extractedVal}");
+            }
         }
 
         static void Main (string[] args)
         {
-            ConsoleIo consoleIo = new ConsoleIo();
-            ApiCaller apiCaller = new ApiCaller();
-            DistanceMatrixConfig matrixConf = new DistanceMatrixConfig();
-
-            var userResponses = consoleIo.Start();
-            String url = matrixConf.Configure(userResponses);
-            apiCaller.ProcessRequest(url).Wait();
-            var response = apiCaller.GetResponse();
-            var distance = Distance(response);
-            consoleIo.Output(distance);
+            AddValues();
+            consoleIo = new ConsoleIo();
+            String url = Url(consoleIo.UserReponses);
+            ApiCaller apiCaller = new ApiCaller(url);
+            var jsonObj = apiCaller.Response;
+            Finalise(jsonObj);
         }
     }
 }

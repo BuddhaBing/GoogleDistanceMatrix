@@ -6,8 +6,13 @@ using Newtonsoft.Json.Linq;
 public class ApiCaller
 {
     private JObject jsonObj;
+
+    public ApiCaller(String url)
+    {
+        Request(url).Wait();
+    }
     
-    public async Task ProcessRequest(String url)
+    public async Task Request(String url)
     {
         try
         {
@@ -22,9 +27,9 @@ public class ApiCaller
             var responseText = await response.Content.ReadAsStringAsync();
             StringToJson(responseText);
         }
-        catch
+        catch(Exception ex)
         {
-            throw;
+            Console.WriteLine(ex);
         }
     }
 
@@ -33,9 +38,12 @@ public class ApiCaller
         jsonObj = JObject.Parse(responseText);
     }
 
-    public JObject GetResponse()
+    public JObject Response
     {
-        return jsonObj;
+        get
+        {
+            return jsonObj;
+        }
     }
     
 }

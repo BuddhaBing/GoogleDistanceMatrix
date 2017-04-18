@@ -8,23 +8,29 @@ public class DistanceMatrixConfig
     private List<String> paramList = new List<String>();
     private String urlParams;
 
-    public string Configure(List<string> userResponses)
+    private Queue<String> paramNames = new Queue<String>();
+
+    public DistanceMatrixConfig()
     {
-        SetParams(userResponses[0], userResponses[1]);
-        CompileParams();
-        return CompileUrl();
+        paramNames.Enqueue("origins");
+        paramNames.Enqueue("destinations");
+        paramNames.Enqueue("mode"); // defaults to driving if left blank
+        paramList.Add($"units={unit}");
+        paramList.Add($"key={apiKey}");
     }
 
-    private void SetParams(string origin, string destination)
+    public String AddParam
     {
-        paramList.Add($"units={unit}");
-        paramList.Add($"origins={origin}");
-        paramList.Add($"destinations={destination}");
-        paramList.Add($"key={apiKey}");
+        set
+        {
+            paramList.Insert(0, $"{paramNames.Dequeue()}={value}");
+            CompileParams();
+        }
     }
 
     private void CompileParams()
     {
+        urlParams = "";
         foreach(String param in paramList) {
             if (paramList.IndexOf(param) == 0) {
                 urlParams += (@"?" + param);
@@ -33,9 +39,10 @@ public class DistanceMatrixConfig
             } 
         }
     }
-    private string CompileUrl()
+
+    public string Url
     {
-        return baseUrl + urlParams;
+        get{ return baseUrl + urlParams; }
     }
 
 }
