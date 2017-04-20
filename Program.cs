@@ -37,7 +37,7 @@ namespace GoogleDistanceMatrix
             }
         }
 
-        static void Finalise(JObject obj)
+        static void Output(JObject obj)
         {
             foreach(String value in values)
             {
@@ -53,7 +53,7 @@ namespace GoogleDistanceMatrix
             String url = Url(consoleIo.UserReponses);
             ApiCaller apiCaller = new ApiCaller(url);
             var jsonObj = apiCaller.Response;
-            Finalise(jsonObj);
+            Output(jsonObj);
         }
     }
 }

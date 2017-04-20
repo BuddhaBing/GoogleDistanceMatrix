@@ -4,7 +4,7 @@ public class DistanceMatrixConfig
 {
     private String baseUrl = @"https://maps.googleapis.com/maps/api/distancematrix/json";
     private String unit = "imperial";
-    private String apiKey = @"";
+    private String apiKey = @"AIzaSyDYNG45WSHzldnr6HzwHkdjP4lIXGFlZb4";
     private List<String> paramList = new List<String>();
     private String urlParams;
     private Queue<String> paramNames = new Queue<String>();
