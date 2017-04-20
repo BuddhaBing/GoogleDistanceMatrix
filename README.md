@@ -23,7 +23,9 @@ This is not intended to be a fully-featured solution, but more a proof of concep
 
 The biggest challenge for me in this test was to try to understand the brief correctly, and I battled with whether to make the app into a browser based web app, or a simple console app. The specification stated that the app is not intended to be a "fully-featured solution, but more a proof of concept that could be extended if necessary", so I eventually settled on a simple console app, in the hope of avoiding over-engineering. If I were to do the test again, I think I would start by asking a clarifying question before starting.
 
-The other challenge was that I have only been exposed to C# in one other project, which was a Unity3D video game, so it was quite different from this test, and I had never used .NET before. Initially I thought that the fact that my preferred development environment is a Mac could pose an issue with .NET, but with .NET Core, Microsoft have made development much easier on macOS and Linux machines.
+The other challenge was that I have only been exposed to C# on one other project, which was a Unity3D video game, so it was quite different from this test, and I had never used .NET before. This meant that I am aware that I am probably missing some .NET/C# conventions that only become apparent with more exposure to the technology.
+
+Initially I thought that the fact that my preferred development environment is a Mac could pose an issue with .NET, but with .NET Core Microsoft have made development much easier on macOS and Linux machines.
 
 Testing was also fairly difficult, as it is a simple app that calls an API and interprets the data, and a lot of the methods are private and therefore untestable. I considered making some of them public, but this would mean breaking encapsulation for the sake of testing, which didn't sit well with me. In the end I just tested the public methods, working on the assumption that if the public methods work, and they call a private method, then the private method must also work.
 
